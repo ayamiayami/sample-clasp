@@ -1,3 +1,6 @@
+/**
+ * GETアクセス時の処理
+ */
 function doGet() {
   return HtmlService.createHtmlOutputFromFile('ui')
     .setTitle("業務ポータル")
