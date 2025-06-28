@@ -8,7 +8,10 @@ function doGet() {
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
 }
 
-
+/**
+ * ジョブリストを取得する
+ * @returns 業務一覧のデータ
+ */
 function getJobList() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName("業務一覧");
   const data = sheet.getDataRange().getValues();
@@ -26,8 +29,11 @@ function getJobList() {
   return jobs;
 }
 
-
-
+/**
+ * 入力定義を取得する
+ * @param {string} jobId
+ * @returns 入力定義s
+ */
 function getInputDefinition(jobId) {
   const sheet = SpreadsheetApp.getActive().getSheetByName("業務入力定義");
   const values = sheet.getDataRange().getValues().slice(1);
