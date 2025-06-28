@@ -32,7 +32,7 @@ function getJobList() {
 /**
  * 入力定義を取得する
  * @param {string} jobId
- * @returns 入力定義s
+ * @returns 入力定義
  */
 function getInputDefinition(jobId) {
   const sheet = SpreadsheetApp.getActive().getSheetByName("業務入力定義");
